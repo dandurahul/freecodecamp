@@ -14,3 +14,11 @@ if (passwordRegex.test(password) === false) {
   console.log("password is created succesfully");
 }
 console.log(passwordRegex.test(password))
+
+
+//userName validator
+
+const userNameRegex=/\w+$/;
+const userNaName="rahul_2Dandu"
+
+console.log("testing the userName",userNameRegex.test(userNaName))

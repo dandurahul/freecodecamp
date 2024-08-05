@@ -3,19 +3,9 @@ const emailChecker = /\w+([.-]?w+)*@\w([.-]?\w+)*(\.\w{2,})+$/;
 const email = "rahl@gmail.com";
 console.log(emailChecker.test(email));
 
-//password checker
-
-// const passwordRegex = /(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
-// const password = "pa4ssword";
-
-// if (passwordRegex.test(password) === false) {
-//   console.log("password must have one Capital letter and Atleast One Number");
-// } else {
-//   console.log("password is created succesfully");
-// }
-// console.log(passwordRegex.test(password))
+// password checker
 const passwordRegex = /(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
-const password = "psa4sD";
+const password = "P5srfdds";
 
 const checks = {
   lowercase: /[a-z]/,
@@ -25,7 +15,6 @@ const checks = {
 };
 
 let missingConditions = [];
-console.log("something something", !checks.lowercase.test(password));
 if (!checks.lowercase.test(password)) {
   missingConditions.push("one lowercase letter");
 }
@@ -37,6 +26,9 @@ if (!checks.digit.test(password)) {
 }
 if (!checks.length.test(password)) {
   missingConditions.push("at least 8 characters");
+}
+if (password.length > 20) {
+  missingConditions.push("Not More than 20 Charectors");
 }
 if (missingConditions.length > 0) {
   console.log("Password must have " + missingConditions);

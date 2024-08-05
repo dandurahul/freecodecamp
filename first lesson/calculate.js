@@ -23,28 +23,25 @@ router.post("/post", (req, res) => {
 app.use("/", router);
 
 const calculateData = (result) => {
-  const array = [result];
+  const array = Array.isArray(result) ? result : [result];
   const datas = array.flatMap((item) => item.invoiceDetails);
-  let result1  = []
-for(let el of datas){
-    let a  = Object.keys(el)
-    if(a.includes(totalAmount)){
-
-
-        
+  let result1 = [];
+  for (let el of datas) {
+    let a = Object.keys(el);
+    if (a.includes(totalAmount)) {
     }
-}
-console.log(result1)
-//   for (let [k,v] in datas) {
-//     console.log({k,v})
-//     // const data = result.totalAmount && result.discountAmount;
-//     // console.log(data);
-//   }
-// datas.map((k,v)=>{
-//     console.log({k,v})
-//     // const data = v.totalAmount && .discountAmount;
-//     //     console.log(data);
-// })
+  }
+  console.log(result1);
+  //   for (let [k,v] in datas) {
+  //     console.log({k,v})
+  //     // const data = result.totalAmount && result.discountAmount;
+  //     // console.log(data);
+  //   }
+  // datas.map((k,v)=>{
+  //     console.log({k,v})
+  //     // const data = v.totalAmount && .discountAmount;
+  //     //     console.log(data);
+  // })
 };
 
 // Start the server and listen on the specified port

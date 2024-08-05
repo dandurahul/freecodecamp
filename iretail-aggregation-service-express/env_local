@@ -1,0 +1,45 @@
+## SERVER configuration
+CONTEXT_PATH=theme-aggregation-service/
+HOST=
+PORT=8016
+STORE_AGGREGATIONS_SERVICE_STATUS=true
+B2B_SERVICE_STATUS=true
+
+## DATABASE configuration
+
+DB_URL=
+DB_HOST=
+DB_PORT=
+DB_USER=
+DB_PWD= 
+DB_DATABASE= 
+
+## HTTP/HTTPS
+SSL = false
+PROTOCOL= http
+KEY = 
+CERT = 
+
+
+# WINSTON logging level
+LOGGING_LEVEL= debug
+LOG_FILE = info.log
+
+# Winston Log levels
+ERROR = error
+WARN  = warn
+INFO = info
+VERBOSE = verbose
+DEBUG = debug
+
+# logging server configuration
+LOGGING_SERVER_HOSTNAME = localhost
+LOGGING_SERVER_PORT = 5024
+LOGGING_SERVER_PATH = /loggings
+
+# cache server
+CACHE = false
+VALIDATE_SECTIONS= true
+
+CLIENT_BASE_SERVICE_URL= https://apigw-honebi-plus.honebi.co/admin-gateway
+businessId= 6462d8ff1d794d53c10a8bca

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/repositories/entities/delivery",
+    "src/api/models/error-response.model.ts",
+    "server.ts"
+, "../import-export-service-express/src/api/routes/file-upload.route.ts"  ],
+  "exclude": ["node_modules"],
+  "typeRoots": ["node_modules/@types", "src/types"]
+}

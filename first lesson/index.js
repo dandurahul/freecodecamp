@@ -101,7 +101,8 @@
 
 // }
 // console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37));
-
+const fs= require("./javascriptprac")
+console.log(fs)
 
 function getAverage(scores) {
   let sum = 0;

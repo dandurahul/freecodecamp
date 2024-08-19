@@ -104,8 +104,9 @@
 
 const fs = require("./javascriptprac");
 const regex = require("./regex");
+const functioncallling = require("./functioncalling");
 
-return fs, regex;
+return fs, regex, functioncallling;
 function getAverage(scores) {
   let sum = 0;
 

@@ -34,3 +34,10 @@ function condistionCheckout(num1, num2) {
   }
   return number;
 }
+let a = 10;
+for (let i = 0; i <= a; i++) {
+  if (i === 9) {
+    continue;
+  }
+  console.log(i);
+}

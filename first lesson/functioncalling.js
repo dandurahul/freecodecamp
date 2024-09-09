@@ -41,3 +41,29 @@ for (let i = 0; i <= a; i++) {
   }
   console.log(i);
 }
+
+const bcrpt = require("bcrypt");
+const salt = 10;
+const password = "RahulDandu";
+const d = "RahulDandu";
+
+const data = async (password, salt) => {
+  let hash;
+  hash = await bcrpt.hash(password, salt);
+  let data = await bcrpt.compare(d, hash);
+  return { hash, data };
+};
+data(password, salt)
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+let i=10
+
+while (i < dd) {
+    i--
+  console.log(i);
+}

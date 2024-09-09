@@ -73,27 +73,21 @@ function twoSum(numbers, target) {
   const data = new Map();
   for (let i = 0; i < numbers.length; i++) {
     const complement = target - numbers[i];
-    console.log({complement})
-    console.log("data.has",data.has(complement))
     if (data.has(complement)) {
-      console.log(data.get(complement),i)
+      console.log({complement})
       return [data.get(complement), i];
     }
     data.set(numbers[i], i);
   }
 }
 
-console.log(twoSum([2, 7, 11, 15], 9)); // Output: [0, 1]
+console.log(twoSum([15, 2, 2, 7], 9)); // Output: [0, 1]
 // console.log(twoSum([3, 2, 4], 6)); // Output: [1, 2]
 // console.log(twoSum([3, 3], 6)); // Output: [0, 1]
-
-
-
 
 //  if (!Array.isArray(data) || !data.every(item => typeof item === 'string')) {
 //       throw new AppError("Filter criteria must contain a 'type' array of strings", 400);
 //     }
-	
 
 //  const data=[["a","b"],["b","c"],["c","delhi"],["delhi","mumbai"]]
 

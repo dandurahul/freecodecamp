@@ -3,6 +3,9 @@ function Person(name, age) {
   this.age = age;
 }
 
+const personInstance= new Person("Rahul",9)
+console.log("Instance of Data",personInstance instanceof Person)
+
 // Adding a method to the prototype
 Person.prototype.greet = function () {
   console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
@@ -78,7 +81,20 @@ console.log(array.includes(array2));
 const numbers = ["1", "2", "3"];
 console.log(...numbers);
 
-function lowerNumber(numbers) {let data = numbers.map((item) => ~~item); return Math.min(...data);}
+function lowerNumber(numbers) {
+  let data = numbers.map((item) => ~~item);
+  return Math.min(...data);
+}
 
 console.log(lowerNumber(numbers));
-console.log(Math.random())
+console.log(Math.random());
+
+function spinWords(string) {
+  let splittedData = string.split(" ");
+  let reverserdData = splittedData.map((item) => {
+    return item.length >= 5 ? item.split("").reverse().join("") : item;
+  });
+  return reverserdData.join(" ");
+}
+
+// this is the topic about the reduce function

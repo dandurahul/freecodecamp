@@ -11,10 +11,7 @@ const PORT = process.env.PORT || 1001;
 
 // app.use("/" + process.env.CONTEXT_PATH,routes)
 let container= new Container()
-let server= new InversifyExpressServer(container,null,{
-  
 
-})
 app.listen(PORT, () => {
   console.log(`mongodb server is running on port ${PORT} :)`);
 });

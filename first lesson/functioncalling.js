@@ -34,3 +34,36 @@ function condistionCheckout(num1, num2) {
   }
   return number;
 }
+let a = 10;
+for (let i = 0; i <= a; i++) {
+  if (i === 9) {
+    continue;
+  }
+  console.log(i);
+}
+
+const bcrpt = require("bcrypt");
+const salt = 10;
+const password = "RahulDandu";
+const d = "RahulDandu";
+
+const data = async (password, salt) => {
+  let hash;
+  hash = await bcrpt.hash(password, salt);
+  let data = await bcrpt.compare(d, hash);
+  return { hash, data };
+};
+data(password, salt)
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+let i=10
+
+while (i < dd) {
+    i--
+  console.log(i);
+}

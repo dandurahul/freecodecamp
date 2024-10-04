@@ -1,0 +1,34 @@
+import "reflect-metadata";
+import { Exclude, Expose } from "class-transformer";
+
+@Exclude()
+export class GlobalCatalogueFilterModel {
+  @Expose()
+  ids?: string[];
+  @Expose()
+  categoryId?: string | undefined;
+  @Expose()
+  productIds?: string[];
+  @Expose()
+  categoryIds?: string[];
+  @Expose()
+  subCategoryId?: string | undefined;
+  @Expose()
+  subCategoryIds?: string[];
+  @Expose()
+  classificationId?: string | undefined;
+  @Expose()
+  classificationIds?: string[];
+  @Expose()
+  highlightId?: string | undefined;
+  @Expose()
+  highlightIds?: string[];
+  @Expose()
+  activeFlag?: boolean;
+  @Expose()
+  priceRange?: Object;
+  @Expose()
+  breadCrumb?: [Object];
+  @Expose()
+  deleteFlag?: boolean;
+}
